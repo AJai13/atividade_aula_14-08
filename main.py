@@ -53,6 +53,9 @@ def game():
             else:
                 if evento.type == pygame.KEYDOWN and evento.key == pygame.K_r:
                     reset_game()
+                if evento.type == pygame.KEYDOWN and evento.key == pygame.K_ESCAPE:
+                    rodando = False
+
 
         if not game_over:
             nave.mover()
@@ -90,8 +93,10 @@ def game():
         if game_over:
             texto_game_over = fonte.render("GAME OVER", True, (255, 0, 0))
             texto_restart = fonte.render("Pressione R para reiniciar", True, (255, 255, 255))
+            texto_sair = fonte.render("Pressione ESC para sair", True, (255, 255, 255))
             tela.blit(texto_game_over, (LARGURA // 2 - texto_game_over.get_width() // 2, ALTURA // 2 - 50))
             tela.blit(texto_restart, (LARGURA // 2 - texto_restart.get_width() // 2, ALTURA // 2))
+            tela.blit(texto_sair, (LARGURA // 2 - texto_sair.get_width() // 2, ALTURA // 2 + 50))
 
         pygame.display.flip()
         clock.tick(60)

@@ -13,9 +13,5 @@ class Inimigo:
     def mover(self):
         self.rect.y += self.velocidade
 
-    # def aumentar_velocidade(inimigo):
-    #     inimigo.velocidade += 1
-    #     return inimigo
-
     def desenhar(self, tela):
         pygame.draw.circle(tela, self.cor, self.rect.center, self.raio)

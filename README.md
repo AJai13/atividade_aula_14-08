@@ -1,0 +1,1 @@
+Desafio em grupo da disciplina de Tópicos Especiais em Software. (quinta-feira, 14/08).
